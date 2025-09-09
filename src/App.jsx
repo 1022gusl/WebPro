@@ -1,17 +1,15 @@
-import Header from './components/Header';
-import Home from './components/Home';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
+import { Component } from 'react';
+import Vegetables from './components/Vegetables';
+import DATAS from './components/DATAS';
 
-function App() {
-  return (
-    <div className="container">
-      <Header />
-      <Home />
-      <ProductList />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Vegetables datas={DATAS} />
+      </div>
+    );
+  }
 }
 
 export default App;
