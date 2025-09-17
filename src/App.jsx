@@ -1,17 +1,12 @@
-import Header from './components/Header';
-import Home from './components/Home';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
+import Book from './components/Book';
+import Datas from './components/Datas';
 
-function App() {
+export default function App() {
   return (
-    <div className="container">
-      <Header />
-      <Home />
-      <ProductList />
-      <Footer />
-    </div>
+    <section className="flex flex-col gap-8">
+      {Datas.map((data) => (
+        <Book key={data.id} data={data} />
+      ))}
+    </section>
   );
 }
-
-export default App;
