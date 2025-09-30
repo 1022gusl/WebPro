@@ -1,17 +1,27 @@
 import Header from './components/Header';
-import Home from './components/Home';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
+import Nav from './components/Nav';
+import Article from './components/Article';
+import Datas from './components/Datas';
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Home />
-      <ProductList />
-      <Footer />
+    <div>
+      <Header
+        title="WEB"
+        onChangeMode={() => {
+          alert('Header가 출력됩니다...');
+        }}
+      />
+
+      <Nav
+        datas={Datas}
+        onChangeMode={(msg) => {
+          alert(msg);
+        }}
+      />
+
+      <Article title="React" body="Hello. React " />
     </div>
   );
 }
-
 export default App;
