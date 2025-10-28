@@ -1,0 +1,21 @@
+.header {
+  background: blue;
+  display: table;
+  width: 80%;
+}
+.item {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: table-cell;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.item:hover {
+  background: orange;
+}
+.item:active {
+  background: white;
+  color: blue;
+}
