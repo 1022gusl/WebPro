@@ -5,6 +5,7 @@ import Project from './Component/Project';
 import Contest from './Component/Contest';
 import Career from './Component/Career';
 import './App.css';
+//css 파일엔 공통부분만 최소한으로 남겨두고 테일윈드를 사용했습니다.
 
 export default function App() {
   return (
