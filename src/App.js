@@ -4,6 +4,8 @@ import MyPage from './components/MyPage';
 import Recommend from './components/Recommend';
 import Search from './components/Search';
 import Posts from './components/Posts';
+import Login from './components/Login';
+
 import './App.css';
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
           <Route path="/recommend" Component={Recommend} />
           <Route path="/search" Component={Search} />
           <Route path="/posts/*" Component={Posts} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </div>
