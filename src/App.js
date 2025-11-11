@@ -1,46 +1,66 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
-import MyPage from './components/MyPage';
-import Recommend from './components/Recommend';
-import Search from './components/Search';
-import Posts from './components/Posts';
-import Login from './components/Login';
-
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <nav className="header">
-          <Link to="/" className="item">
-            Home
-          </Link>
-          <Link to="/mypage/2" className="item">
-            MyPage
-          </Link>
-          <Link to="/recommend" className="item">
-            Recommend
-          </Link>
-          <Link to="/search" className="item">
-            Search
-          </Link>
-          <Link to="/posts" className="item">
-            Posts
-          </Link>
-        </nav>
-
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/mypage/:name" Component={MyPage} />
-          <Route path="/recommend" Component={Recommend} />
-          <Route path="/search" Component={Search} />
-          <Route path="/posts/*" Component={Posts} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </Router>
-    </div>
-  );
+// 예제 1
+function double(n) {
+  // 5
+  console.log(`두 배 결과: ${n * 2}`); // 6
 }
 
-export default App;
+function processNumber(callback) {
+  // 2
+  const num = 5; // 3
+  callback(num); //4
+}
+
+processNumber(double); // 1
+
+console.log('프로그램 종료!'); // 7
+
+/* 실행결과 
+  ---------------------------------
+  두 배 결과: 10
+  프로그램 종료!
+  ---------------------------------
+  */
+
+// 예제 2
+function printUpper(text) {
+  // 5
+  console.log(`대문자 변환: ${text.toUpperCase()}`); // 6
+}
+
+function handleText(callback) {
+  // 2
+  const word = 'javascript'; // 3
+  callback(word); // 4
+}
+
+handleText(printUpper); // 1
+console.log('작업 완료!'); // 7
+
+/* 실행결과 
+  ---------------------------------
+  대문자 변환: JAVASCRIPT
+  작업 완료!
+  ---------------------------------
+  */
+
+// 예제 3
+function showLength(arr) {
+  // 5
+  console.log(`배열 길이: ${arr.length}`); // 6
+}
+
+function getArray(callback) {
+  // 2
+  const items = ['사과', '배', '바나나']; // 3
+  callback(items); // 4
+}
+
+getArray(showLength); // 1
+console.log('프로그램 끝!'); // 7
+
+/* 실행결과 
+  ---------------------------------
+  배열 길이: 3
+  프로그램 끝!
+  ---------------------------------
+  */
