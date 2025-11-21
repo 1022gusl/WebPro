@@ -17,7 +17,7 @@ const statusStyle = {
 
 export default function License() {
   const [tab, setTab] = useState('all');
-  const [sortKey, setSortKey] = useState('acquiredAt'); // 'acquiredAt' | 'name'
+  const [sortKey, setSortKey] = useState('acquiredAt');
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
